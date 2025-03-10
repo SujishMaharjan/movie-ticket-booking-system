@@ -6,3 +6,4 @@ movie_id,movie_name,movie_status,movie_description,total_seats,booked_seats,avai
 4,Iron Man 4,Not Available,Time Travel,200,0,200
 5,Fast and Furious,Available,Action,200,190,10
 6,Hulk,Available,Action movie,200,10,190
+7,Avengers 5,Available,Scifi movie,200,185,15

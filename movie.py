@@ -74,30 +74,33 @@ class Movie:
             if i==0:
                 continue
             if row[0] == movie_id:
-                print(row)
+                # print(row)
                 index = i
-                print(index)
+                # print(index)
                 break
         # Changing the booked_seats and availbale in _movie_list
         # print(self._movie_list[index][5],self._movie_list[index][6],type(no_of_seats))
-
+        # this code if will be used to reserve the seats
+        # self._movie_list[index][5]  has booked seats data 
+        # self._movie_list[index][5] has available seats data for a movie
         if no_of_seats != 0: 
             self._movie_list[index][5] = int(self._movie_list[index][5]) + int(no_of_seats)
             self._movie_list[index][6] = int(self._movie_list[index][6]) - int(no_of_seats)
             print(f"index:{index}")
-            #if available_seats is full set it to Not available
+            #if available_seats is zero set it to Fully reserve
             if self._movie_list[index][6] == 0:
                 self._movie_list[index][2] ="Fully Reserved"
                 print(f"Movie id {self._movie_id} {self._movie_name} is Fully Reserved")
+        #whereas this below code will run for seats to unreserve the seat
         else:
             print(f"index this :{index}")
             self._movie_list[index][5] = int(self._movie_list[index][5]) - int(no_of_seats_unreserve)
             self._movie_list[index][6] = int(self._movie_list[index][6]) + int(no_of_seats_unreserve)
             
-            #if available_seats is full set it to Not available
+            #if available_seats is not zero set it to Available
             if self._movie_list[index][6] != 0:
                 self._movie_list[index][2] ="Available"
-                print(f"Movie id {self._movie_id} {self._movie_name} is Available Now")
+                # print(f"Movie id {self._movie_id} {self._movie_name} is Available")
         
 
         #Overwriting the data in movie.

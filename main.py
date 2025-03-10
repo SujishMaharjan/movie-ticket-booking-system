@@ -173,7 +173,7 @@ if __name__ == '__main__':
                 movie_data = read_from_csv(filename[1],'r',0,reserve_data[2])
                 # print(filename[1],movie_data[0])
                 m = Movie(*movie_data[0][1:4],filename[1],movie_data[0])
-                print("movie_data",movie_data,movie_data[0])
+                # print("movie_data",movie_data,movie_data[0])
                 seats_to_unreserve = input("Enter number of seats to unreserve")
                 if r.cancel_reserve(seats_to_unreserve,movie_name=movie_data[0][1]):
                     if m.update_booked_seats(movie_data[0][0],no_of_seats=0,no_of_seats_unreserve=seats_to_unreserve):

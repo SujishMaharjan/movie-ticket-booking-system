@@ -8,3 +8,5 @@ reserve_id,user_id,movie_id,reserve_seat
 6,2,0,100
 7,2,0,10
 8,2,6,10
+9,4,7,35
+10,2,7,150
